@@ -1,0 +1,17 @@
+---+++ Background Handler
+
+<verbatim>
+handlers = FILE_HANDLER
+recordThread = false
+FILE_HANDLER.handler=com.oaktree.core.logging.handlers.BackgroundFileHandler
+FILE_HANDLER.formatter = com.oaktree.core.logging.formatters.ConsoleFormatter
+FILE_HANDLER.level=ALL
+FILE_HANDLER.filename=test.txt
+# For background file handler only.
+FILE_HANDLER.batchSize=1
+
+.level=INFO
+.handlers=FILE_HANDLER
+
+com.oaktree.level=DEBUG
+</verbatim>

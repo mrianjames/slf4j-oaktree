@@ -1,0 +1,5 @@
+---+ Future Development
+
+   * Testing of multiple handlers
+   * Evaluation of performance of adding handlers at runtime.
+   * LogRecord "pooling" to minimise GC - general pooling performance research and testing needed.

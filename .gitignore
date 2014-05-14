@@ -1,0 +1,8 @@
+test.txt
+binlog*
+target
+mylog.log
+.classpath
+.project
+.settings
+.svn

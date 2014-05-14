@@ -1,0 +1,37 @@
+---+++ Basic Configuration
+
+Command Line:
+<verbatim>
+java -Doaktree.logging.config.file=log.properties <myclass>
+</verbatim>
+
+Note the name of the log file is entirely up to you; it just has to be on your classpath.
+
+log.properties:
+<verbatim>
+recordThread=true
+handlers=BRIAN,TREVOR
+
+BRIAN.handler=com.oaktree.core.logging.handlers.ConsoleHandler
+BRIAN.formatter=com.oaktree.core.logging.formatters.MinimalFormatter
+BRIAN.level=INFO
+
+TREVOR.handler=com.oaktree.core.logging.handlers.ConsoleHandler
+TREVOR.formatter=com.oaktree.core.logging.formatters.ConsoleFormatter
+TREVOR.level=INFO
+
+
+.level=WARN
+.handlers=BRIAN,TREVOR
+com.oaktree.level=INFO
+#com.oaktree.handlers=
+com.logwars.level=WARN
+</verbatim>
+
+---+++ Notes
+
+   * This library allows both java.util and log4j logging level names to be used.
+   * Out the box (no configuration) the root logger is configured with INFO level.
+   * If you have issues check you do not have another slf4j implementation jumping infront of this one on your classpath. You will see an error reporting multiple implementations on stderr if this is the case. 
+
+ 

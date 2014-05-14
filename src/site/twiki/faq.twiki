@@ -1,0 +1,12 @@
+---+ FAQ
+
+   * Why? When running in latency sensitive multithreaded applications (e.g. electronic trading) you can find that existing logging implementations "block" causing latency and minimising throughput. This library attempts to provide similar functionality but attuned to high performant concurrent application development.	  
+   * It doesnt run with latest slf4j? No, not yet. API has changed so bear with me...
+   * What can I use this for? Anything - I dont want your money, I wrote this so I didnt have to profile any logging related latency problems ever again. If you like it, use it!
+   * Apart from not blocking, what else? It also supports looking at thread id and name for presenetation to the log records; this is useful where your handlers are background handlers and the writing thread is not the thread that made the log record. Both values are useful as you may have thread name set to a logical queue name and thread id is the physical underlying resource processing that queue.
+   * I cant see my logging. Help!
+      * Check log config file location is valid.
+      * Check this slf4j implementation isnt getting trounced by another (you should see an error on stderr about this)
+      * Check properties file values are valid.
+	 		
+	
