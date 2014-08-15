@@ -6,3 +6,5 @@ mylog.log
 .project
 .settings
 .svn
+*.iml
+.idea
